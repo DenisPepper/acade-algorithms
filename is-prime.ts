@@ -5,14 +5,13 @@ const isPrime = (n: number) => {
   if (n < 1) {
     throw new Error('n must be >= 2');
   }
-  let result = true;
+
   let divider = 2;
   while (divider > 1 && divider < n) {
     if (n % divider === 0) {
-      result = false;
-      break;
+      return false;
     }
     divider += 1;
   }
-  return result;
+  return true;
 };
