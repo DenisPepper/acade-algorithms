@@ -1,6 +1,6 @@
 //написать функцию, которая принимает на вход массив чисел и возвращает наименьшее
 
-export const minimum = (items: number[]): number | undefined => {
+export const getMin = (items: number[]): number | undefined => {
   if (items.length === 0) return;
 
   let result = items[0];
@@ -13,5 +13,3 @@ export const minimum = (items: number[]): number | undefined => {
 
   return result;
 };
-
-
