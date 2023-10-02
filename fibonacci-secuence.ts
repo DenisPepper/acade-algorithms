@@ -8,15 +8,10 @@ const fibSecuence = (n: number): number => {
   }
 
   if (store.has(n)) {
-    console.log('store');
     return store.get(n) as number;
   } else {
     const result = fibSecuence(n - 1) + fibSecuence(n - 2);
-    console.log('evaluation');
     store.set(n, result);
     return result;
   }
 };
-
-console.log(fibSecuence(8));
-console.log(fibSecuence(10));
