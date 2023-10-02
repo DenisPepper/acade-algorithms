@@ -1,4 +1,4 @@
-const store = new Map();
+const store = new Map<number, number>();
 
 //реализация через рекурсию
 export const factorialByRecursion = (n: number): number => {
@@ -11,7 +11,7 @@ export const factorialByRecursion = (n: number): number => {
   }
 
   if (store.has(n)) {
-    return n;
+    return store.get(n) as number;
   } else {
     const result = n * factorialByRecursion(n - 1);
     store.set(n, result);
