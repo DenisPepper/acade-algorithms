@@ -1,8 +1,6 @@
 const findIndex = (item, array, comparatorFn) => {
   for (let index = 0; index < array.length; index++) {
-    if (comparatorFn(item, array[index])) {
-      return index;
-    }
+    if (comparatorFn(item, array[index])) return index;
   }
 };
 
